@@ -1,0 +1,1024 @@
+{
+  "slices": [
+    {
+      "id": "3458764626192467653",
+      "status": "Created",
+      "title": "slice: notifications to send TODO",
+      "context": "",
+      "commands": [
+        {
+          "id": "3458764626191243501",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: notifications to send TODO",
+          "title": "Request Notification",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "COMMAND",
+          "description": "",
+          "aggregateDependencies": [],
+          "dependencies": [
+            {
+              "id": "3458764626191016154",
+              "type": "OUTBOUND",
+              "title": "Notification requested",
+              "elementType": "EVENT"
+            },
+            {
+              "id": "3458764626191243490",
+              "type": "INBOUND",
+              "title": "processor",
+              "elementType": "AUTOMATION"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "3458764626191016154",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: notifications to send TODO",
+          "title": "Notification requested",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "EVENT",
+          "description": "",
+          "aggregateDependencies": [],
+          "dependencies": [
+            {
+              "id": "3458764626190609121",
+              "type": "OUTBOUND",
+              "title": "notifications to send TODO",
+              "elementType": "READMODEL"
+            },
+            {
+              "id": "3458764626191243501",
+              "type": "INBOUND",
+              "title": "Request Notification",
+              "elementType": "COMMAND"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "readmodels": [
+        {
+          "id": "3458764626190609121",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: notifications to send TODO",
+          "title": "notifications to send TODO",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "READMODEL",
+          "description": "",
+          "aggregateDependencies": [],
+          "dependencies": [
+            {
+              "id": "3458764626190844958",
+              "type": "OUTBOUND",
+              "title": "processor",
+              "elementType": "AUTOMATION"
+            },
+            {
+              "id": "3458764626191016154",
+              "type": "INBOUND",
+              "title": "Notification requested",
+              "elementType": "EVENT"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "screens": [],
+      "processors": [
+        {
+          "id": "3458764626191243490",
+          "groupId": "3458764626191243498",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: notifications to send TODO",
+          "title": "processor",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "model",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "price",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "AUTOMATION",
+          "description": "",
+          "aggregateDependencies": [],
+          "dependencies": [
+            {
+              "id": "3458764626191243501",
+              "type": "OUTBOUND",
+              "title": "Request Notification",
+              "elementType": "COMMAND"
+            },
+            {
+              "id": "3458764626190925665",
+              "type": "INBOUND",
+              "title": "purchases",
+              "elementType": "READMODEL"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "tables": [],
+      "specifications": [],
+      "actors": [],
+      "aggregates": []
+    },
+    {
+      "id": "3458764626190845310",
+      "status": "Created",
+      "title": "slice: Notify Customer",
+      "context": "",
+      "commands": [
+        {
+          "id": "3458764626190844964",
+          "domain": "",
+          "modelContext": "Purchases",
+          "slice": "slice: Notify Customer",
+          "title": "Notify Customer",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "COMMAND",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626190756695",
+              "type": "OUTBOUND",
+              "title": "Customer notified",
+              "elementType": "EVENT"
+            },
+            {
+              "id": "3458764626190844958",
+              "type": "INBOUND",
+              "title": "processor",
+              "elementType": "AUTOMATION"
+            }
+          ],
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "3458764626190756695",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: Notify Customer",
+          "title": "Customer notified",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "EVENT",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626190844964",
+              "type": "INBOUND",
+              "title": "Notify Customer",
+              "elementType": "COMMAND"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "readmodels": [],
+      "screens": [],
+      "processors": [
+        {
+          "id": "3458764626190844958",
+          "groupId": "3458764626190844963",
+          "domain": "",
+          "modelContext": "Purchases",
+          "slice": "slice: Notify Customer",
+          "title": "processor",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "AUTOMATION",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626190844964",
+              "type": "OUTBOUND",
+              "title": "Notify Customer",
+              "elementType": "COMMAND"
+            },
+            {
+              "id": "3458764626190925665",
+              "type": "INBOUND",
+              "title": "purchases",
+              "elementType": "READMODEL"
+            },
+            {
+              "id": "3458764626190609121",
+              "type": "INBOUND",
+              "title": "notifications to send TODO",
+              "elementType": "READMODEL"
+            }
+          ],
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "tables": [],
+      "specifications": [],
+      "actors": [],
+      "aggregates": [
+        "purchase"
+      ]
+    },
+    {
+      "id": "3458764626191323340",
+      "status": "Created",
+      "title": "slice: purchases",
+      "context": "",
+      "commands": [],
+      "events": [],
+      "readmodels": [
+        {
+          "id": "3458764626190925665",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: purchases",
+          "title": "purchases",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "model",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "price",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "READMODEL",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626191243490",
+              "type": "OUTBOUND",
+              "title": "processor",
+              "elementType": "AUTOMATION"
+            },
+            {
+              "id": "3458764626190844958",
+              "type": "OUTBOUND",
+              "title": "processor",
+              "elementType": "AUTOMATION"
+            },
+            {
+              "id": "3458764626190448609",
+              "type": "INBOUND",
+              "title": "Purchase confirmed",
+              "elementType": "EVENT"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "screens": [],
+      "processors": [],
+      "tables": [],
+      "specifications": [],
+      "actors": [],
+      "aggregates": [
+        "purchase"
+      ]
+    },
+    {
+      "id": "3458764626190534029",
+      "status": "Created",
+      "title": "slice: Confirm Purchase",
+      "context": "",
+      "commands": [
+        {
+          "id": "3458764626190533950",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: Confirm Purchase",
+          "title": "Confirm Purchase",
+          "fields": [
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": true,
+              "technicalAttribute": false
+            },
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "model",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "price",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "COMMAND",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626190448609",
+              "type": "OUTBOUND",
+              "title": "Purchase confirmed",
+              "elementType": "EVENT"
+            },
+            {
+              "id": "3458764626190533965",
+              "type": "INBOUND",
+              "title": "screen",
+              "elementType": "SCREEN"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "3458764626190448609",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: Confirm Purchase",
+          "title": "Purchase confirmed",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "model",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "price",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "EVENT",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626190925665",
+              "type": "OUTBOUND",
+              "title": "purchases",
+              "elementType": "READMODEL"
+            },
+            {
+              "id": "3458764626190533950",
+              "type": "INBOUND",
+              "title": "Confirm Purchase",
+              "elementType": "COMMAND"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "readmodels": [],
+      "screens": [
+        {
+          "id": "3458764626190533965",
+          "groupId": "3458764626190533971",
+          "domain": "",
+          "modelContext": "Purchases",
+          "context": "INTERNAL",
+          "slice": "slice: Confirm Purchase",
+          "title": "screen",
+          "fields": [
+            {
+              "name": "email",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "model",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "price",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            },
+            {
+              "name": "orderId",
+              "type": "String",
+              "schema": "",
+              "example": "",
+              "mapping": "",
+              "optional": false,
+              "generated": false,
+              "cardinality": "Single",
+              "idAttribute": false,
+              "technicalAttribute": false
+            }
+          ],
+          "type": "SCREEN",
+          "description": "",
+          "aggregate": "purchase",
+          "aggregateDependencies": [
+            "purchase"
+          ],
+          "dependencies": [
+            {
+              "id": "3458764626190533950",
+              "type": "OUTBOUND",
+              "title": "Confirm Purchase",
+              "elementType": "COMMAND"
+            }
+          ],
+          "listElement": false,
+          "apiEndpoint": "",
+          "service": null,
+          "createsAggregate": false,
+          "prototype": {
+            "activeByDefault": false
+          }
+        }
+      ],
+      "processors": [],
+      "tables": [],
+      "specifications": [
+        {
+          "vertical": true,
+          "id": "3458764626190534408",
+          "sliceName": "slice: Confirm Purchase",
+          "title": "spec: Confirm Purchase",
+          "given": [],
+          "when": [
+            {
+              "title": "Confirm Purchase",
+              "id": "3458764626190534409",
+              "index": 0,
+              "specRow": -1,
+              "type": "SPEC_COMMAND",
+              "fields": [
+                {
+                  "name": "orderId",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": true,
+                  "technicalAttribute": false
+                },
+                {
+                  "name": "email",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                },
+                {
+                  "name": "model",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                },
+                {
+                  "name": "price",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                }
+              ],
+              "linkedId": "3458764626190533950",
+              "expectEmptyList": false
+            }
+          ],
+          "then": [
+            {
+              "title": "Purchase confirmed",
+              "id": "3458764626190534411",
+              "index": 0,
+              "specRow": -1,
+              "type": "SPEC_EVENT",
+              "fields": [
+                {
+                  "name": "email",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                },
+                {
+                  "name": "model",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                },
+                {
+                  "name": "price",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                },
+                {
+                  "name": "orderId",
+                  "type": "String",
+                  "schema": "",
+                  "example": "",
+                  "mapping": "",
+                  "optional": false,
+                  "generated": false,
+                  "cardinality": "Single",
+                  "idAttribute": false,
+                  "technicalAttribute": false
+                }
+              ],
+              "linkedId": "3458764626190448609",
+              "expectEmptyList": false
+            }
+          ],
+          "comments": [
+            {
+              "description": " Foo            "
+            },
+            {
+              "description": " Foo            "
+            }
+          ]
+        }
+      ],
+      "actors": [],
+      "aggregates": [
+        "purchase"
+      ]
+    }
+  ],
+  "flows": [],
+  "aggregates": [
+    {
+      "id": "3458764626192402702",
+      "title": "purchase",
+      "fields": [
+        {
+          "name": "aggregateId",
+          "type": "UUID",
+          "example": "",
+          "mapping": "",
+          "optional": false,
+          "generated": false,
+          "cardinality": "Single",
+          "idAttribute": true,
+          "technicalAttribute": false
+        }
+      ],
+      "service": null,
+      "type": "AGGREGATE"
+    }
+  ],
+  "actors": [],
+  "context": "Purchases",
+  "codeGen": {
+    "application": "",
+    "domain": "",
+    "rootPackage": "",
+    "contextPackage": ""
+  },
+  "boardId": "uXjVIUZz1oE="
+}
