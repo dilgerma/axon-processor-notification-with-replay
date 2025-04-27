@@ -1,33 +1,22 @@
-## Nebulit GmbH - Eventmodeling Template
+## Nebulit GmbH - Axon Example with Replay Check
 
-### Setup
+This is an example of how Axon can use Notifications to trigger event processors. 
 
-Slices sind im _root_ Package (wie im Generator angegeben) als Packages definiert.
+In this case, you need to be Replay-Aware to only notify a processor in case no replay is active.
 
-### Todos nach der initialen Generierung
+The Event Model for this case is [here](https://miro.com/app/board/uXjVI9I9GSM=/?moveToWidget=3458764626209443544&cot=14)
 
-Im Code sind TODOs definiert für die Stellen die angepasst werden müssen.
-Der Generator trifft bestimmte Grundannahmen (aggregateIds sind UUIDs beispielsweise).
+The Code in this sample application is 95% generated from the model, using the [Miro Event Modeling Toolkit](https://nebulit.de/accelerate)
 
-Wird von diesen Annahmen abgewichen kompiliert der Code ggf. nicht sofort sondern muss leicht
-angepasst werden.
+You can find all details also in the [Understanding Eventsourcing Book](https://leanpub.com/eventmodeling-and-eventsourcing)
+and in the Companion Course [Implementing Eventsourcing Course](https://www.eventsourcingcourse.com)
 
-Ihre Code Richtlinien sind natürlich führend, daher ist es erwartungskonform dass Code
-nicht sofort kompiliert (es sollten aber wirklich nur kleine Anpassungen notwendig sein).
+Here the processor sends an E-Mail (indicated by a log statement):
 
-### Start der Applikation
+[Code](https://github.com/dilgerma/axon-processor-notification-with-replay/blob/main/src/main/kotlin/de/nebulit/notifycustomer/internal/ProcessorProcessor.kt#L27)
 
-Zum Start des Services kann die Klasse _ApplicationStarter_ verwendet werden in _src/test/kotlin_.
-Warum in _test_?
+And [here](https://github.com/dilgerma/axon-processor-notification-with-replay/blob/main/src/main/kotlin/de/nebulit/purchases/internal/PurchasesReadModelProjector.kt#L38) the processor is triggered,
+guarded by a Replay-Check.
 
-Diese Klasse startet die komplette Umgebung (inkl. Postgres und ggf. Kafka über TestContainers)
-
-### Package Struktur
-
-Events sind im Package "events"
-
-Aggregates liegen im Package "domain"
-
-Slices haben jeweils ein isoliertes Package <sliceName>
-
-Package "common" enthält einige Interfaces für die generelle Struktur.
+Contact: info@nebulit.de
+Company: https://www.nebulit.de

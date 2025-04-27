@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component
 Boardlink: https://miro.com/app/board/uXjVIUZz1oE=/?moveToWidget=3458764626190844958
 */
 @Component
-class ProcessorProcessor : Processor {
+class NotificationProcessor : Processor {
   var logger = KotlinLogging.logger {}
 
   @Autowired lateinit var commandGateway: CommandGateway
